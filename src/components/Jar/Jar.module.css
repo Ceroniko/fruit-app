@@ -1,0 +1,29 @@
+@keyframes shaking {
+  0% {
+    transform: translateX(0);
+  }
+  2.5% {
+    transform: translateX(3px);
+  }
+  5.0% {
+    transform: translateX(-3px);
+  }
+  7.5% {
+    transform: translateX(3px);
+  }
+  10.0% {
+    transform: translateX(0);
+  }
+}
+
+.jar[data-shake='true'] {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: shaking 5s linear infinite;
+}
+
+.filling {
+  --_progress: calc(100% - (var(--progress, 0) * 100%));
+  clip-path: polygon(0 var(--_progress), 0 100%, 100% 100%, 100% var(--_progress));
+  transition: clip-path 250ms ease;
+}

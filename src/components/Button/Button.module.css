@@ -1,0 +1,29 @@
+.button {
+  appearance: none;
+  height: var(--control-height);
+  padding-inline: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  line-height: 1.2;
+  font-weight: 600;
+  font-size: var(--font-size-base);
+  user-select: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius-base);
+  outline: transparent solid 3px;
+  background-color: var(--blue-400);
+  transition: all var(--transition-duration) var(--transition-function);
+  transition-property: background-color, outline;
+}
+
+.button:hover {
+  background-color: var(--blue-500);
+}
+
+.button:focus-visible {
+  outline-color: var(--blue-200);
+}

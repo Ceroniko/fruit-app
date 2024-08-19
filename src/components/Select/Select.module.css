@@ -1,0 +1,33 @@
+.selectContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  cursor: pointer;
+  width: 100%;
+  height: var(--control-height);
+  padding-inline: var(--spacing-lg);
+  border-radius: var(--border-radius-base);
+  outline: transparent solid 3px;
+  line-height: 1.25;
+  font-size: var(--font-size-base);
+  border: 1px solid var(--blue-400);
+  transition: all var(--transition-duration) var(--transition-function);
+  transition-property: border-color, outline;
+}
+
+.select:hover {
+  border-color: var(--blue-500);
+}
+
+.select:focus-visible {
+  outline-color: var(--blue-200);
+}
+
+.chevron {
+  position: absolute;
+  right: var(--spacing-sm);
+}

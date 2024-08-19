@@ -1,0 +1,29 @@
+.loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-xxl);
+}
+
+.loader::after {
+  content: '';
+  animation: dots 2s steps(5) backwards infinite;
+}
+
+@keyframes dots {
+  0%,
+  100% {
+    content: '';
+  }
+  25% {
+    content: '.';
+  }
+  50% {
+    content: '..';
+  }
+  75% {
+    content: '...';
+  }
+}

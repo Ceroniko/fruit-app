@@ -1,0 +1,66 @@
+.wrapper {
+  width: 100%;
+}
+
+.accordionTrigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-base);
+  outline: transparent solid 3px;
+  font-size: var(--font-size-base);
+  padding-inline: var(--spacing-base);
+  padding-block: var(--spacing-sm);
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  transition: all var(--transition-duration) var(--transition-function);
+  transition-property: background-color, outline;
+  overflow: hidden;
+}
+
+.accordionTrigger:hover {
+  background-color: var(--gray-200);
+}
+
+.accordionTrigger:focus-visible {
+  outline-color: var(--blue-200);
+}
+
+.accordionTriggerLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accordionTriggerAdditionalContent {
+  margin-inline-start: auto;
+}
+
+.accordionIcon {
+  transition: transform var(--transition-duration) var(--transition-function);
+}
+
+.accordionTrigger[aria-expanded='true'] .accordionIcon {
+  transform: rotate(180deg);
+}
+
+.accordionPanel {
+  display: grid;
+  grid-template-rows: 0fr;
+  overflow: hidden;
+  transition: grid-template-rows var(--transition-duration) var(--transition-function);
+}
+
+.accordionPanel[data-expand='true'] {
+  grid-template-rows: 1fr;
+}
+
+.accordionPanelWrapper {
+  overflow: hidden;
+  transition: visibility var(--transition-duration) var(--transition-function);
+  visibility: visible;
+}
+
+.accordionPanel[data-expand='false'] .accordionPanelWrapper {
+  visibility: hidden;
+}
