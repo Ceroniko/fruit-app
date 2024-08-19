@@ -1,7 +1,7 @@
 import { Fruit, FruitsGroup } from '@dataTypes/fruits';
 import { FC } from 'react';
-import { Accordion } from '../Accordion';
-import { Button } from '../Button';
+import { Accordion } from '@components/Accordion';
+import { Button } from '@components/Button';
 import classes from './FruitList.module.css';
 
 type FruitListProps = {

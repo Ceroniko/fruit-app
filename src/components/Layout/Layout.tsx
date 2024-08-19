@@ -1,5 +1,5 @@
+import { ErrorBoundary } from '@components/ErrorBoundary';
 import { FC, PropsWithChildren } from 'react';
-import { ErrorBoundary } from '../ErrorBoundary';
 import classes from './Layout.module.css';
 
 const Layout: FC<PropsWithChildren> = ({ children }) => {
